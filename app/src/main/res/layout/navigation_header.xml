@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="304dp"
+    android:layout_height="172dp"
+    android:background="@color/c88c9bf">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/andre_foto"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="224dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginTop="40dp" />
+    <TextView
+        android:id="@+id/nomeNoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andre Heladio"
+        android:textSize="14dp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/c434343"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
