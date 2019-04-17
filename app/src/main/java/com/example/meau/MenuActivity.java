@@ -23,7 +23,7 @@ public class MenuActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);   //Activity sera exibida em fullscreen
 
-        tb =  findViewById(R.id.toolbar_id);
+        tb =  findViewById(R.id.id_toolbarIntro);
         setSupportActionBar(tb);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
