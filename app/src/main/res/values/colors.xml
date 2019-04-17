@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFD358</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBackgroundMiau">#88C9BF</color>
+    <color name="ffd358">#FFD358</color>
+    <color name="c757575">#757575</color>
+    <color name="c434343">#434343</color>
+    <color name="c88c9bf">#88C9BF</color>
+
+</resources>

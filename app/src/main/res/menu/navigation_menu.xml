@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Atalhos"
+            android:id="@+id/atalhos_id">
+        </item>
+        <item
+            android:title="Informações"
+            android:id="@+id/informacoes_id">
+        </item>
+        <item
+            android:title="Configurações"
+            android:id="@+id/configuracoes_id">
+        </item>
+    </group>
+</menu>
