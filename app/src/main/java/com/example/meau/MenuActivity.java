@@ -1,6 +1,6 @@
 package com.example.meau;
 
-import android.support.design.widget.FloatingActionButton;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 
 public class MenuActivity extends AppCompatActivity {
@@ -41,5 +40,10 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    public void login(View view){
+        Intent it = new Intent(MenuActivity.this, Login.class);
+        startActivity(it);
     }
 }
