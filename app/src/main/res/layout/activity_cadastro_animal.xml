@@ -123,7 +123,168 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_textFixFotosAnim"
                 android:layout_marginTop="20dp"
-                android:text="ESPECIE"/>
+                android:text="ESPÉCIE"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixEspecie"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/id_radioGroup1">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cachorro"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Gato"/>
+            </RadioGroup>
+
+            <TextView
+            android:id="@+id/id_textFixSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_radioGroup1"
+            android:layout_marginTop="20dp"
+            android:text="SEXO"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixSexo"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/id_radioGroup2">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Macho"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Fêmea"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/id_textFixPorte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_radioGroup2"
+                android:layout_marginTop="20dp"
+                android:text="PORTE"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixPorte"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/id_radioGroup3">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pequeno"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Médio"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Grande"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/id_textFixIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_radioGroup3"
+                android:layout_marginTop="20dp"
+                android:text="IDADE"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixIdade"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/id_radioGroup4">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filhote"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Adulto"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Idoso"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/id_textFixTemper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_radioGroup4"
+                android:layout_marginTop="20dp"
+                android:text="TEMPERAMENTO"/>
+
+            <TableLayout
+                android:id="@+id/id_tl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixTemper"
+                android:layout_marginTop="20dp">
+                <TableRow android:id="@+id/id_tr1">
+                    <CheckBox android:text="Brincalhão"/>
+                    <CheckBox android:text="Tímido"/>
+                    <CheckBox android:text="Calmo"/>
+                </TableRow>
+
+                <TableRow android:id="@+id/id_tr2">
+                    <CheckBox android:text="Guarda"/>
+                    <CheckBox android:text="Amoroso"/>
+                    <CheckBox android:text="Preguiçoso"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/id_textFixSaude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_tl1"
+                android:layout_marginTop="20dp"
+                android:text="SAUDE"/>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixSaude"
+                android:layout_marginTop="20dp">
+                <TableRow android:id="@+id/id_tr3">
+                    <CheckBox android:text="Vacinado"/>
+                    <CheckBox android:text="Vermifugado"/>
+                </TableRow>
+
+                <TableRow android:id="@+id/id_tr4">
+                    <CheckBox android:text="Castrado"/>
+                    <CheckBox android:text="Doente"/>
+                </TableRow>
+            </TableLayout>
 
         </RelativeLayout>
 
