@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CadastroAnimal"
+        android:id="@+id/id_CadastroAnimal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbarCadastroAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:background="#ffd358"
+            app:title="Cadastrar Animal"
+            app:titleTextColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/id_textCad"
+            android:gravity="center"
+            android:layout_below="@id/id_toolbarCadastroAnimal"
+            android:textSize="14dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Tenho interesse em cadastrar o animal para:"/>
+
+        <LinearLayout
+            android:id="@+id/id_layoutLinearCad"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/id_textCad"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true">
+
+
+            <Button
+                android:id="@+id/id_btnAdocao"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@color/ffd358"
+                android:width="2dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:layout_marginRight="8dp"
+                android:text="Adoção"/>
+
+            <Button
+                android:id="@+id/id_btnApadrinhar"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#f1f2f2"
+                android:textColor="#bdbdbd"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:text="Apadrinhar" />
+
+            <Button
+                android:id="@+id/id_btnAjuda"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#f1f2f2"
+                android:textColor="#434343"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:layout_marginLeft="8dp"
+                android:text="Ajuda" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_layoutInformacoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_layoutLinearCad"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:id="@+id/id_textEscolha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c434343"
+                android:textSize="16dp"
+                android:text="Botao Legal"
+                />
+
+            <TextView
+                android:id="@+id/id_textFixNomAnim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textEscolha"
+                android:layout_marginTop="24dp"
+                android:text="NOME DO ANIMAL"/>
+
+            <EditText
+                android:id="@+id/id_usuNomAnimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixNomAnim"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Nome do animal"/>
+
+            <TextView
+                android:id="@+id/id_textFixFotosAnim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_usuNomAnimal"
+                android:layout_marginTop="20dp"
+                android:text="FOTOS DO ANIMAL"/>
+            <TextView
+                android:id="@+id/id_textFixEspecie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_textFixFotosAnim"
+                android:layout_marginTop="20dp"
+                android:text="ESPECIE"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_LayFrag"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/id_layoutInformacoes"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

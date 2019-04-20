@@ -1,121 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/id_layoutIntro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/id_toolbarIntro"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/id_textoOla"
-        android:layout_width="181dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="56dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="Olá!"
-        android:textColor="@color/colorPrimary"
-        android:textSize="70dp"
-        android:typeface="normal"
-        app:fontFamily="@font/courgette"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbarIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
 
-    <TextView
-        android:id="@+id/id_textoBV"
-        android:layout_width="283dp"
-        android:layout_height="81dp"
-        android:layout_centerHorizontal="true"
-        android:textSize="16dp"
-        android:gravity="center"
-        app:fontFamily="@font/roboto"
-        android:layout_below="@id/id_textoOla"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="52dp"
-        android:text="Bem vindo ao Meau! Aqui você pode adotar, doar e ajudar cães e gatos com facilidade. Qual o seu interesse?" />
+        <TextView
+            android:id="@+id/id_textoOla"
+            android:layout_width="181dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="56dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Olá!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="70dp"
+            android:typeface="normal"
+            app:fontFamily="@font/courgette"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="122dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="32dp"
-        android:layout_below="@id/id_login"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        app:srcCompat="@drawable/meau_marca_2" />
+        <TextView
+            android:id="@+id/id_textoBV"
+            android:layout_width="283dp"
+            android:layout_height="81dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:gravity="center"
+            app:fontFamily="@font/roboto"
+            android:layout_below="@id/id_textoOla"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="52dp"
+            android:text="Bem vindo ao Meau! Aqui você pode adotar, doar e ajudar cães e gatos com facilidade. Qual o seu interesse?" />
 
-    <TextView
-        android:id="@+id/id_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/id_btnCadAnim"
-        android:layout_marginTop="44dp"
-        android:text="login"
-        android:textColor="@color/c88c9bf"
-        android:textSize="16sp"
-        app:fontFamily="@font/roboto" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="122dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="32dp"
+            android:layout_below="@id/id_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            app:srcCompat="@drawable/meau_marca_2" />
 
-    <Button
-        android:id="@+id/id_btnCadAnim"
-        android:shape="rectangle"
-        android:layout_centerHorizontal="true"
-        android:width="2dp"
-        android:layout_width="232dp"
-        android:layout_height="40dp"
-        android:background="@color/ffd358"
-        android:text="Cadastrar Animal"
-        android:textColor="@android:color/black"
-        android:layout_below="@id/id_btnAjudar"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="48dp" />
+        <TextView
+            android:id="@+id/id_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/id_btnCadAnim"
+            android:layout_marginTop="44dp"
+            android:text="login"
+            android:textColor="@color/c88c9bf"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto" />
 
-    <Button
-        android:id="@+id/id_btnAjudar"
-        android:shape="rectangle"
-        android:layout_centerHorizontal="true"
-        android:width="2dp"
-        android:layout_width="232dp"
-        android:layout_height="40dp"
-        android:background="@color/ffd358"
-        android:text="Ajudar"
-        android:textColor="@android:color/black"
-        android:layout_below="@id/id_btnAdotar"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="48dp"/>
+        <Button
+            android:id="@+id/id_btnCadAnim"
+            android:shape="rectangle"
+            android:layout_centerHorizontal="true"
+            android:width="2dp"
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:background="@color/ffd358"
+            android:text="Cadastrar Animal"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/id_btnAjudar"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="48dp" />
 
-    <Button
-        android:id="@+id/id_btnAdotar"
-        android:shape="rectangle"
-        android:layout_centerHorizontal="true"
-        android:width="2dp"
-        android:layout_width="232dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/id_textoBV"
-        android:layout_marginTop="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="32dp"
-        android:background="@color/ffd358"
-        android:text="Adotar"
-        android:textColor="@android:color/black" />
+        <Button
+            android:id="@+id/id_btnAjudar"
+            android:shape="rectangle"
+            android:layout_centerHorizontal="true"
+            android:width="2dp"
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:background="@color/ffd358"
+            android:text="Ajudar"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/id_btnAdotar"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="48dp"/>
 
-
-    <!--<FrameLayout
-        android:id="@+id/id_layoutMenu"
-        android:layout_width="304dp"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-    </FrameLayout>-->
-</RelativeLayout>
+        <Button
+            android:id="@+id/id_btnAdotar"
+            android:shape="rectangle"
+            android:layout_centerHorizontal="true"
+            android:width="2dp"
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/id_textoBV"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/ffd358"
+            android:text="Adotar"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+</ScrollView>
