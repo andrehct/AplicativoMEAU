@@ -56,7 +56,7 @@ public class CadastroAnimal extends AppCompatActivity {
             public void onClick(View v){
                 textoPorBtn.setText("Adoção");
                 getSupportFragmentManager().beginTransaction()
-                        .add(R.id.id_LayFrag, new FragmentCadastroAnimal())
+                        .add(R.id.id_LayFrag, new FragmentCadAdocAnim())
                         .commit();
             }
         });

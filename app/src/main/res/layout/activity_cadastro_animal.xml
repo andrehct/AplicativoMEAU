@@ -98,7 +98,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_textEscolha"
                 android:layout_marginTop="24dp"
-                android:text="NOME DO ANIMAL"/>
+                android:text="NOME DO ANIMAL"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <EditText
                 android:id="@+id/id_usuNomAnimal"
@@ -116,14 +119,20 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_usuNomAnimal"
                 android:layout_marginTop="20dp"
-                android:text="FOTOS DO ANIMAL"/>
+                android:text="FOTOS DO ANIMAL"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
             <TextView
                 android:id="@+id/id_textFixEspecie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_textFixFotosAnim"
                 android:layout_marginTop="20dp"
-                android:text="ESPÉCIE"/>
+                android:text="ESPÉCIE"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -150,7 +159,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/id_radioGroup1"
             android:layout_marginTop="20dp"
-            android:text="SEXO"/>
+            android:text="SEXO"
+            android:fontFamily="@font/roboto"
+            android:textSize="12dp"
+            android:textColor="#f7a800"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -177,7 +189,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_radioGroup2"
                 android:layout_marginTop="20dp"
-                android:text="PORTE"/>
+                android:text="PORTE"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -209,7 +224,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_radioGroup3"
                 android:layout_marginTop="20dp"
-                android:text="IDADE"/>
+                android:text="IDADE"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -241,7 +259,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_radioGroup4"
                 android:layout_marginTop="20dp"
-                android:text="TEMPERAMENTO"/>
+                android:text="TEMPERAMENTO"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <TableLayout
                 android:id="@+id/id_tl1"
@@ -255,7 +276,9 @@
                     <CheckBox android:text="Calmo"/>
                 </TableRow>
 
-                <TableRow android:id="@+id/id_tr2">
+                <TableRow
+                    android:id="@+id/id_tr2"
+                    android:layout_marginTop="28dp">
                     <CheckBox android:text="Guarda"/>
                     <CheckBox android:text="Amoroso"/>
                     <CheckBox android:text="Preguiçoso"/>
@@ -268,9 +291,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_tl1"
                 android:layout_marginTop="20dp"
-                android:text="SAUDE"/>
+                android:text="SAUDE"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                android:textColor="#f7a800"/>
 
             <TableLayout
+                android:id="@+id/id_tl2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_textFixSaude"
@@ -280,22 +307,34 @@
                     <CheckBox android:text="Vermifugado"/>
                 </TableRow>
 
-                <TableRow android:id="@+id/id_tr4">
+                <TableRow
+                    android:id="@+id/id_tr4"
+                    android:layout_marginTop="28dp">
                     <CheckBox android:text="Castrado"/>
                     <CheckBox android:text="Doente"/>
                 </TableRow>
             </TableLayout>
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_usuDoencasAnim"
+                android:layout_below="@id/id_tl2"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Doenças do animal"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/id_LayFrag"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/id_layoutInformacoes"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp">
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp">
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
