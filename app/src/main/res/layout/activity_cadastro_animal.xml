@@ -19,7 +19,8 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             android:background="#ffd358"
-            app:title="Cadastrar Animal"
+            app:title="Cadastro Animal"
+            android:textSize="20pt"
             app:titleTextColor="#FFFFFF"/>
 
         <TextView
@@ -46,10 +47,10 @@
                 android:id="@+id/id_btnAdocao"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:background="@color/ffd358"
+                android:background="#f1f2f2"
                 android:width="2dp"
                 android:fontFamily="@font/roboto"
-                android:textSize="12dp"
+                android:textSize="6pt"
                 android:layout_marginRight="8dp"
                 android:text="Adoção"/>
 
@@ -58,9 +59,9 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:background="#f1f2f2"
-                android:textColor="#bdbdbd"
+                android:textColor="#434343"
                 android:fontFamily="@font/roboto"
-                android:textSize="12dp"
+                android:textSize="6pt"
                 android:text="Apadrinhar" />
 
             <Button
@@ -70,7 +71,7 @@
                 android:background="#f1f2f2"
                 android:textColor="#434343"
                 android:fontFamily="@font/roboto"
-                android:textSize="12dp"
+                android:textSize="6pt"
                 android:layout_marginLeft="8dp"
                 android:text="Ajuda" />
         </LinearLayout>
@@ -88,9 +89,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/c434343"
-                android:textSize="16dp"
-                android:text="Botao Legal"
-                />
+                android:textSize="16pt"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/id_textFixNomAnim"
