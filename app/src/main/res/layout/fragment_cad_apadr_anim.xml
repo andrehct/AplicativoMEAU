@@ -3,88 +3,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentCadAdocAnim">
+    tools:context=".FragmentCadApadrAnim">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/id_textFixExigsAdoc"
+        android:id="@+id/id_textFixExigsApadr"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="EXIGÊNCIAS PARA ADOÇÃO"
+        android:text="EXIGÊNCIAS PARA APADRINHAMENTO"
         android:fontFamily="@font/roboto"
         android:textSize="12dp"
         android:textColor="#f7a800" />
 
     <CheckBox
-        android:id="@+id/id_checkTermoAdoc"
+        android:id="@+id/id_checkTermoApadr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_textFixExigsAdoc"
+        android:layout_below="@id/id_textFixExigsApadr"
         android:layout_marginTop="28dp"
-        android:text="Termo de adoção"/>
+        android:text="Termo de apadrinhamento"/>
+
 
     <CheckBox
-        android:id="@+id/id_checkFotosCasa"
+        android:id="@+id/id_checkAuxFinanceiro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkTermoAdoc"
+        android:layout_below="@id/id_checkTermoApadr"
         android:layout_marginTop="28dp"
-        android:text="Fotos da casa"/>
+        android:text="Auxílio financeiro"/>
 
     <CheckBox
-        android:id="@+id/id_checkVisitaPrev"
+        android:id="@+id/id_checkAuxAlim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkFotosCasa"
-        android:layout_marginTop="28dp"
-        android:text="Visita prévia ao animal"/>
-
-    <CheckBox
-        android:id="@+id/id_checkAcompPosAdoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkVisitaPrev"
-        android:layout_marginTop="28dp"
-        android:text="Acompanhamento pós doação"/>
-
-    <CheckBox
-        android:id="@+id/id_checkPosAdoc1m"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkAcompPosAdoc"
+        android:layout_below="@id/id_checkAuxFinanceiro"
         android:layout_marginTop="28dp"
         android:layout_marginLeft="40dp"
         android:fontFamily="@font/roboto"
         android:textColor="#bdbdbd"
-        android:text="1 mês"/>
+        android:text="Alimentação"/>
 
     <CheckBox
-        android:id="@+id/id_checkPosAdoc3m"
+        android:id="@+id/id_checkAuxSaude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkPosAdoc1m"
+        android:layout_below="@id/id_checkAuxAlim"
         android:layout_marginTop="28dp"
         android:layout_marginLeft="40dp"
         android:fontFamily="@font/roboto"
         android:textColor="#bdbdbd"
-        android:text="3 meses"/>
+        android:text="Saúde"/>
 
     <CheckBox
-        android:id="@+id/id_checkPosAdoc6m"
+        android:id="@+id/id_checkAuxObj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_checkPosAdoc3m"
+        android:layout_below="@id/id_checkAuxSaude"
         android:layout_marginTop="28dp"
         android:layout_marginLeft="40dp"
         android:fontFamily="@font/roboto"
         android:textColor="#bdbdbd"
-        android:text="6 meses"/>
+        android:text="Objetos"/>
+
+    <CheckBox
+        android:id="@+id/id_checkVisitasAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkAuxObj"
+        android:layout_marginTop="28dp"
+        android:text="Visitas ao animal"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/id_textFixSobreAnimAdoc"
-        android:layout_below="@id/id_checkPosAdoc6m"
+        android:id="@+id/id_textFixSobreAnimApadr"
+        android:layout_below="@id/id_checkVisitasAnim"
         android:layout_marginTop="24dp"
         android:text="SOBRE O ANIMAL"
         android:fontFamily="@font/roboto"
@@ -94,20 +87,21 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/id_usuHistAnimAdoc"
-        android:layout_below="@id/id_textFixSobreAnimAdoc"
+        android:id="@+id/id_usuHistAnimApadr"
+        android:layout_below="@id/id_textFixSobreAnimApadr"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="text"
         android:hint="Compartilhe a história do animal"/>
 
     <Button
-        android:id="@+id/id_btnColocarAdoc"
+        android:id="@+id/id_btnProcPadr"
         android:layout_width="232dp"
         android:layout_height="40dp"
-        android:layout_below="@id/id_usuHistAnimAdoc"
+        android:layout_below="@id/id_usuHistAnimApadr"
         android:layout_marginTop="24dp"
-        android:text="COLOCAR PARA ADOÇÃO"
+        android:text="PROCURAR PADRINHO"
         android:background="#ffd358"
         android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

@@ -42,6 +42,9 @@ public class CadastroAnimal extends AppCompatActivity {
             public void onClick(View v) {
                 //criar o bagui aqui
                 textoPorBtn.setText("Apadrinhar");
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.id_LayFrag, new FragmentCadApadrAnim())
+                        .commit();
             }
         });
 
