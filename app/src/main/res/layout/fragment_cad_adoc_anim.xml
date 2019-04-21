@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentCadAdocAnim">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/id_textFixExigsAdoc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="EXIGÊNCIAS PARA ADOÇÃO"
+        android:fontFamily="@font/roboto"
+        android:textSize="12dp"
+        android:textColor="#f7a800" />
+
+    <CheckBox
+        android:id="@+id/id_checkTermoAdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_textFixExigsAdoc"
+        android:layout_marginTop="28dp"
+        android:text="Termo de adoção"/>
+
+    <CheckBox
+        android:id="@+id/id_checkFotosCasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkTermoAdoc"
+        android:layout_marginTop="28dp"
+        android:text="Fotos da casa"/>
+
+    <CheckBox
+        android:id="@+id/id_checkVisitaPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkFotosCasa"
+        android:layout_marginTop="28dp"
+        android:text="Visita prévia ao animal"/>
+
+    <CheckBox
+        android:id="@+id/id_checkAcompPosAdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkVisitaPrev"
+        android:layout_marginTop="28dp"
+        android:text="Acompanhamento pós doação"/>
+
+    <CheckBox
+        android:id="@+id/id_checkPosAdoc1m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkAcompPosAdoc"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#bdbdbd"
+        android:text="1 mês"/>
+
+    <CheckBox
+        android:id="@+id/id_checkPosAdoc3m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkPosAdoc1m"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#bdbdbd"
+        android:text="3 meses"/>
+
+    <CheckBox
+        android:id="@+id/id_checkPosAdoc6m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkPosAdoc3m"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#bdbdbd"
+        android:text="6 meses"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_textFixSobreAnimAdoc"
+        android:layout_below="@id/id_checkPosAdoc6m"
+        android:layout_marginTop="24dp"
+        android:text="SOBRE O ANIMAL"
+        android:fontFamily="@font/roboto"
+        android:textSize="12dp"
+        android:textColor="#f7a800"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_usuHistAnimAdoc"
+        android:layout_below="@id/id_textFixSobreAnimAdoc"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Compartilhe a história do animal"/>
+
+    <Button
+        android:id="@+id/id_btnColocarAdoc"
+        android:layout_width="232dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/id_usuHistAnimAdoc"
+        android:layout_marginTop="24dp"
+        android:text="COLOCAR PARA ADOÇÃO"
+        android:background="#ffd358"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
