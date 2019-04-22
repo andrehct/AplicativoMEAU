@@ -30,7 +30,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorBackgroundMiau"
                 android:gravity="center"
-                android:text="As informações preenchidas serão divulgadas apenas para a pessoa com a qual você realizar o processo de adoção e/oi apadrinhamento, após a formalização do processo."
+                android:text="As informações preenchidas serão divulgadas apenas para a pessoa com a qual você realizar o processo de adoção e/ou apadrinhamento, após a formalização do processo."
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 app:fontFamily="sans-serif" />
@@ -167,6 +167,22 @@
                 android:ems="10"
                 android:hint="Confirmar Senha"
                 android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="abrirGaleria"
+                app:srcCompat="@drawable/baseline_add_photo_alternate_black_48" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBackgroundMiau"
+                android:text="Fazer Cadastro"
+                android:textAlignment="center"
+                android:textColor="#ECE8E8" />
 
         </LinearLayout>
     </ScrollView>
