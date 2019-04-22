@@ -1,5 +1,6 @@
 package com.example.meau;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,4 +27,8 @@ public class Login extends AppCompatActivity {
         });*/
     }
 
+    public void cadastroPessoa(View view){
+        Intent it = new Intent(Login.this, CadastroPessoa.class);
+        startActivity(it);
+    }
 }
