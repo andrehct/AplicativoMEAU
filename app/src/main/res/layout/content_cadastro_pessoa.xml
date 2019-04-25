@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CadastroPessoa"
+    tools:showIn="@layout/activity_cadastro_pessoa">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="337dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="122dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorBackgroundMiau"
+                android:gravity="center"
+                android:text="As informações preenchidas serão divulgadas apenas para a pessoa com a qual você realizar o processo de adoção e/ou apadrinhamento, após a formalização do processo."
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="INFORMAÇÕES PESSOAIS "
+                android:textColor="@color/colorBackgroundMiau"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Nome"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Idade"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Email  "
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Estado"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Cidade"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Endereço"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Telefone"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="INFORMAÇÕES DE PERFIL"
+                android:textColor="@color/colorBackgroundMiau"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Login"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editText19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Confirmar Senha"
+                android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="abrirGaleria"
+                app:srcCompat="@drawable/baseline_add_photo_alternate_black_48" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBackgroundMiau"
+                android:text="Fazer Cadastro"
+                android:textAlignment="center"
+                android:textColor="#ECE8E8" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -53,17 +53,18 @@
             android:layout_marginTop="68dp"
             app:srcCompat="@drawable/meau_marca_2" />
 
-        <TextView
-            android:id="@+id/id_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/id_btnCadAnim"
-            android:layout_marginTop="44dp"
-            android:text="login"
-            android:textColor="@color/c88c9bf"
-            android:textSize="16sp"
-            app:fontFamily="@font/roboto" />
+    <TextView
+        android:id="@+id/id_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_btnCadAnim"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:onClick="login"
+        android:text="login"
+        android:textColor="@color/c88c9bf"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto" />
 
         <Button
             android:id="@+id/id_btnCadAnim"
