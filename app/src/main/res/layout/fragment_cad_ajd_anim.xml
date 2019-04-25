@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentCadAjdAnim">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/id_textFixExigsAjd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="NECESSIDADES DO ANIMAL"
+        android:fontFamily="@font/roboto"
+        android:textSize="12dp"
+        android:textColor="#f7a800" />
+
+    <CheckBox
+        android:id="@+id/id_checkAlimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_textFixExigsAjd"
+        android:layout_marginTop="28dp"
+        android:text="Alimento"/>
+
+
+    <CheckBox
+        android:id="@+id/id_checkAuxFinanceiroAjd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkAlimento"
+        android:layout_marginTop="28dp"
+        android:text="Auxílio financeiro"/>
+
+    <CheckBox
+        android:id="@+id/id_checkMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_checkAuxFinanceiroAjd"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto"
+        android:text="Medicamento"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_usuNomMed"
+        android:layout_below="@id/id_checkMedicamento"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nome do medicamento"/>
+
+    <CheckBox
+        android:id="@+id/id_checkObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_usuNomMed"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto"
+        android:text="Objetos"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_usuNomObj"
+        android:layout_below="@id/id_checkObj"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Especifique o(s) objeto(s)"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_textFixSobreAnimAjd"
+        android:layout_below="@id/id_usuNomObj"
+        android:layout_marginTop="24dp"
+        android:text="SOBRE O ANIMAL"
+        android:fontFamily="@font/roboto"
+        android:textSize="12dp"
+        android:textColor="#f7a800"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_usuHistAnimApadr"
+        android:layout_below="@id/id_textFixSobreAnimAjd"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Compartilhe a história do animal"/>
+
+    <Button
+        android:id="@+id/id_btnProcAjd"
+        android:layout_width="232dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/id_usuHistAnimApadr"
+        android:layout_marginTop="24dp"
+        android:text="PROCURAR AJUDA"
+        android:background="#ffd358"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

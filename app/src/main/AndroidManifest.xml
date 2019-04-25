@@ -13,6 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CadastroAnimal" android:label="Cadastrar Animal"/>
+        <activity android:name=".MeusPets" />
+        <activity
+            android:name=".MenuActivity"
+            android:label=" " />
         <activity
             android:name=".CadastroPessoa"
             android:label="@string/title_activity_cadastro_pessoa"
@@ -21,7 +26,6 @@
             android:name=".Login"
             android:label="@string/title_activity_login_app"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MenuActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
