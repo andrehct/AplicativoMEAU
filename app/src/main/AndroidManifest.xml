@@ -9,10 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/meau_icone"
-<<<<<<< HEAD
-=======
         android:label="Meau"
->>>>>>> 97fc3480b0be00247133df6a0a49fe968b0a4267
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
