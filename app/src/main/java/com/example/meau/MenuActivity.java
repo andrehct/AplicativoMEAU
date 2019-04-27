@@ -1,7 +1,6 @@
 package com.example.meau;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -42,5 +41,10 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+    }
+
+    public void login(View view){
+        Intent it = new Intent(MenuActivity.this, Login.class);
+        startActivity(it);
     }
 }
