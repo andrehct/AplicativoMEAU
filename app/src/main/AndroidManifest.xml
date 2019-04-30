@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityFinalCadAnim"></activity>
+        <activity android:name=".ActivityFinalCadAnim" />
         <activity
             android:name=".CadastroAnimal"
             android:label="Cadastrar Animal" />
@@ -24,7 +24,7 @@
         <activity
             android:name=".CadastroPessoa"
             android:label="@string/title_activity_cadastro_pessoa"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login_app"
