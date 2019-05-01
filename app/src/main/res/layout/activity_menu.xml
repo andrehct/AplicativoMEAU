@@ -51,7 +51,7 @@
             android:layout_below="@id/id_login"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="68dp"
-            app:srcCompat="@drawable/meau_marca_2" />
+            app:srcCompat="@mipmap/meau_marca_2" />
 
     <TextView
         android:id="@+id/id_login"

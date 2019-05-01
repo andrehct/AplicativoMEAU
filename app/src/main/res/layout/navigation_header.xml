@@ -5,7 +5,7 @@
     android:layout_height="172dp"
     android:background="@color/c88c9bf">
     <de.hdodenhof.circleimageview.CircleImageView
-        android:src="@drawable/andre_foto"
+        android:src="@mipmap/andre_foto"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginLeft="16dp"

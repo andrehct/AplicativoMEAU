@@ -216,7 +216,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
-                        .setLogo(R.drawable.meau_marca)      // Set logo drawable
+                        .setLogo(R.mipmap.meau_marca)      // Set logo drawable
                         .setTheme(R.style.AppTheme)      // Set theme
                         .build(),
                 RC_SIGN_IN);
