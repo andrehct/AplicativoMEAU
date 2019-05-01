@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityFinalCadAnim">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbarFimCadastroAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:background="#ffd358"
+            app:title="Cadastro Animal"
+            android:textSize="20pt"
+            app:titleTextColor="#FFFFFF"
+            android:layout_centerHorizontal="true"/>
 
+        <TextView
+            android:id="@+id/id_textoEba"
+            android:layout_below="@id/id_toolbarFimCadastroAnimal"
+            android:layout_width="181dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="52dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Eba!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="70dp"
+            android:typeface="normal"
+            app:fontFamily="@font/courgette"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/id_texto2"
+            android:layout_width="283dp"
+            android:layout_height="81dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:gravity="center"
+            app:fontFamily="@font/roboto"
+            android:layout_below="@id/id_textoEba"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="52dp"
+            android:text="O cadastro do seu pet foi realizado com sucesso!"/>
+
+        <TextView
+            android:id="@+id/id_texto3"
+            android:layout_width="283dp"
+            android:layout_height="81dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:gravity="center"
+            app:fontFamily="@font/roboto"
+            android:layout_below="@id/id_texto2"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="5dp"
+            android:text="Certifique-se que permitiu o envio de notificações por push no campo privacidade do menu configurações do aplicativo. Assim, poderemos te avisar assim que alguém interessado entrar em contato!"/>
+
+        <Button
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="MEUS PETS"
+            android:background="#ffd358"
+            android:layout_below="@id/id_texto3"
+            android:layout_marginTop="20dp"
+            android:layout_marginParentBottom="24dp"/>
+    </RelativeLayout>
+</ScrollView>
