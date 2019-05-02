@@ -1,6 +1,8 @@
 package com.example.meau;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +23,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class DocSnippets implements DocSnippetsInterface{
+public class DocSnippets extends AppCompatActivity implements DocSnippetsInterface{
 
     private static final String TAG = "DocSnippets";
 
@@ -51,29 +53,32 @@ public class DocSnippets implements DocSnippetsInterface{
 
 
 
-    void runCadastroCliente(Map<String, Object> user) {
+    public boolean runCadastroCliente(Map<String, Object> user) {
         Log.d(TAG, "================= BEGIN RUN ALL ===============");
-        addCliente(user);
+        return addCliente(user);
     }
 
-    public void addCliente(Map<String, Object> user) {
+    public boolean addCliente(Map<String, Object> user) {
         // Add a new document with a generated ID
-        db.collection("users")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Erro ao tentar persistir os dados", e);
-                    }
-                });
-        // [END add_ada_lovelace]
-
+        try {
+            db.collection("users")
+                    .add(user)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Erro ao tentar persistir os dados", e);
+                        }
+                    });
+            return true;
+        }catch(Exception e){
+            return false;
+        }
     }
 
     public void getAllUsers() {

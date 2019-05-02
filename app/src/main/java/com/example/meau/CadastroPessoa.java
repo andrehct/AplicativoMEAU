@@ -11,6 +11,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -119,6 +120,13 @@ public class CadastroPessoa extends AppCompatActivity{
 
         // Run snippets
         DocSnippets docSnippets = new DocSnippets(mFirestore);
-        docSnippets.runCadastroCliente(user);
+
+        if(docSnippets.runCadastroCliente(user)){
+            Toast.makeText(getApplicationContext(), "Cadastro Realizado com sucesso", Toast.LENGTH_SHORT).show();
+            Intent it = new Intent(CadastroPessoa.this, MenuActivity.class);
+            startActivity(it);
+        }else{
+            Toast.makeText(getApplicationContext(), "Erro ao realizar cadastro", Toast.LENGTH_SHORT).show();
+        }
     }
 }

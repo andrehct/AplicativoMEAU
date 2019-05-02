@@ -94,7 +94,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));*/
 
             findViewById(R.id.signInButton).setVisibility(View.GONE);
-            //findViewById(R.id.signOutAndDisconnect).setVisibility(View.VISIBLE);
+            findViewById(R.id.signOutAndDisconnect).setVisibility(View.VISIBLE);
         } else {
             //mStatusTextView.setText(R.string.signed_out);
             //mDetailTextView.setText("Testando 1");
@@ -244,9 +244,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         if (i == R.id.signInButton) {
             signIn();
         }
-        /*else if (i == R.id.signOutButton) {
+        else if (i == R.id.signOutAndDisconnect) {
             signOut();
-        } else if (i == R.id.disconnectButton) {
+        }
+        /*else if (i == R.id.disconnectButton) {
             revokeAccess();
         }*/
     }
