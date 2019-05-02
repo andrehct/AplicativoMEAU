@@ -5,17 +5,38 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class CadastroPessoa extends AppCompatActivity {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+public class CadastroPessoa extends AppCompatActivity{
 
     public static final int PICK_IMAGE = 1234;
+
+    private FirebaseFirestore mFirestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +47,7 @@ public class CadastroPessoa extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //Mostrar o botão
         getSupportActionBar().setHomeButtonEnabled(true);
 
-/*        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        mFirestore = FirebaseFirestore.getInstance();
     }
 
     @Override
@@ -64,4 +78,47 @@ public class CadastroPessoa extends AppCompatActivity {
         }
     }
 
+    public void cadastrarCliente(View view){
+        EditText nomeTxt = findViewById(R.id.id_nome_user);
+        String nome = nomeTxt.getText().toString();
+
+        EditText idadelTxt = findViewById(R.id.id_idade_user);
+        String idade = idadelTxt.getText().toString();
+
+        EditText emailTxt = findViewById(R.id.id_email_user);
+        String email = emailTxt.getText().toString();
+
+        EditText estadoTxt = findViewById(R.id.id_estado_user);
+        String estado = estadoTxt.getText().toString();
+
+        EditText cidadeTxt = findViewById(R.id.id_cidade_user);
+        String cidade = cidadeTxt.getText().toString();
+
+        EditText endTxt = findViewById(R.id.id_end_user);
+        String endereco = endTxt.getText().toString();
+
+        EditText telefoneTxt = findViewById(R.id.id_telefone_user);
+        String telefone = telefoneTxt.getText().toString();
+
+        EditText loginTxt = findViewById(R.id.id_login_user);
+        String login = loginTxt.getText().toString();
+
+        EditText senhaTxt = findViewById(R.id.id_senha_user);
+        String senha = senhaTxt.getText().toString();
+
+        Map<String, Object> user = new HashMap<>();
+        user.put("nome", nome);
+        user.put("idade", idade);
+        user.put("email", email);
+        user.put("estado", estado);
+        user.put("cidade", cidade);
+        user.put("endereco", endereco);
+        user.put("telefone", telefone);
+        user.put("login", login);
+        user.put("senha", senha);
+
+        // Run snippets
+        DocSnippets docSnippets = new DocSnippets(mFirestore);
+        docSnippets.runCadastroCliente(user);
+    }
 }

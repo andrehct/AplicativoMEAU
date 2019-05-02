@@ -176,10 +176,11 @@
                 app:srcCompat="@drawable/baseline_add_photo_alternate_black_48" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/cadastrarPessoa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorBackgroundMiau"
+                android:onClick="cadastrarCliente"
                 android:text="Fazer Cadastro"
                 android:textAlignment="center"
                 android:textColor="#ECE8E8" />
