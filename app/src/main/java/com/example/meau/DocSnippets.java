@@ -75,6 +75,7 @@ public class DocSnippets extends AppCompatActivity implements DocSnippetsInterfa
                             Log.w(TAG, "Erro ao tentar persistir os dados", e);
                         }
                     });
+            db.collection("users").
             return true;
         }catch(Exception e){
             return false;
