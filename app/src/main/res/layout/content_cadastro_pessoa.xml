@@ -48,7 +48,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/id_nome_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/id_idade_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -70,7 +70,7 @@
                 android:inputType="number" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/id_email_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -81,7 +81,7 @@
                 android:inputType="textEmailAddress" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/id_estado_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -92,7 +92,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/id_cidade_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -103,7 +103,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/id_end_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -114,7 +114,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/id_telefone_user"
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -136,7 +136,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText17"
+                android:id="@+id/id_login_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -147,7 +147,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText18"
+                android:id="@+id/id_senha_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -158,7 +158,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/editText19"
+                android:id="@+id/id_confsenha_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

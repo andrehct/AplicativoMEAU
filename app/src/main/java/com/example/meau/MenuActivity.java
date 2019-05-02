@@ -41,6 +41,14 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+        Button btnAdotAni = findViewById(R.id.id_btnAdotar);
+
+        btnAdotAni.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+            }
+        });
     }
 
     public void login(View view){
