@@ -8,7 +8,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/meau_icone"
+        android:icon="@drawable/meau_icone"
         android:label="Meau"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
