@@ -27,4 +27,24 @@
     <string name="facebook_application_id" translatable="false">com.example.meau</string>
     <string name="facebook_login_protocol_scheme" translatable="false">https://appmeau.firebaseapp.com/__/auth/handler</string>
     <string name="title_activity_google_sign_in">GoogleSignInActivity</string>
+
+    //Strings do sexo do animal
+    <string name="animal_sexo_m">Macho</string>
+    <string name="animal_sexo_f">Femea</string>
+
+    //Strings da idade do animal
+    <string name="animal_adulto">Adulto</string>
+    <string name="animal_filhote">Filhote</string>
+
+    //Strings do porte do animal
+    <string name="animal_porte_p">Pequeno</string>
+    <string name="animal_porte_m">Medio</string>
+    <string name="animal_porte_g">Grande</string>
+
+    //Strings de localidades
+    <string name="asa_sul">Asa Sul - Brasilia - DF</string>
+
+    //Strings de nomes
+    <string name="nomeAnimal">Spot</string>
+
 </resources>
