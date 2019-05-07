@@ -2,6 +2,7 @@ package com.example.meau;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,12 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentCadAdocAnim extends Fragment{
+
+    private FirebaseFirestore mFirestore;
+    private DatabaseReference mDatabase;
 
 
     public FragmentCadAdocAnim() {
@@ -42,5 +53,4 @@ public class FragmentCadAdocAnim extends Fragment{
         });
 
     }
-
 }

@@ -1,6 +1,7 @@
 package com.example.meau;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -25,6 +26,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -40,9 +44,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     // [END declare_auth]
 
+    private SharedPreferences pref;
     private GoogleSignInClient mGoogleSignInClient;
     private TextView mStatusTextView;
     private TextView mDetailTextView;
+    private FirebaseFirestore mFirestore;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +83,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
 
+        mFirestore = FirebaseFirestore.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
     // [START on_start_check_user]
@@ -92,6 +101,21 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         if (user != null) {
         /*    mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));*/
+            Users u = new Users();
+
+            u.setId(user.getUid());
+            u.setEmail(user.getEmail());
+            u.setTelefone(user.getPhoneNumber());
+            u.setNome(user.getDisplayName());
+            //Create a object SharedPreferences from getSharedPreferences("name_file",MODE_PRIVATE) of Context
+
+            pref = getSharedPreferences("info", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("id",user.getUid());
+            editor.commit();
+
+            DocSnippets docSnippets = new DocSnippets(mFirestore, mDatabase);
+            docSnippets.inserirUsuarioGoogle(u);
 
             findViewById(R.id.signInButton).setVisibility(View.GONE);
             findViewById(R.id.signOutAndDisconnect).setVisibility(View.VISIBLE);

@@ -2,6 +2,7 @@ package com.example.meau;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,6 +22,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
@@ -39,6 +42,9 @@ public class CadastroPessoa extends AppCompatActivity{
 
     private FirebaseFirestore mFirestore;
 
+    private DatabaseReference mDatabase;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,11 @@ public class CadastroPessoa extends AppCompatActivity{
         getSupportActionBar().setHomeButtonEnabled(true);
 
         mFirestore = FirebaseFirestore.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        SharedPreferences shared = getSharedPreferences("info",MODE_PRIVATE);
+        String string_temp = shared.getString("id", "");
+
     }
 
     @Override
@@ -79,49 +90,28 @@ public class CadastroPessoa extends AppCompatActivity{
         }
     }
 
+    public String retornValor(int id){
+        EditText nomeTxt = findViewById(id);
+        return nomeTxt.getText().toString();
+    }
+
     public void cadastrarCliente(View view){
-        EditText nomeTxt = findViewById(R.id.id_nome_user);
-        String nome = nomeTxt.getText().toString();
 
-        EditText idadelTxt = findViewById(R.id.id_idade_user);
-        String idade = idadelTxt.getText().toString();
-
-        EditText emailTxt = findViewById(R.id.id_email_user);
-        String email = emailTxt.getText().toString();
-
-        EditText estadoTxt = findViewById(R.id.id_estado_user);
-        String estado = estadoTxt.getText().toString();
-
-        EditText cidadeTxt = findViewById(R.id.id_cidade_user);
-        String cidade = cidadeTxt.getText().toString();
-
-        EditText endTxt = findViewById(R.id.id_end_user);
-        String endereco = endTxt.getText().toString();
-
-        EditText telefoneTxt = findViewById(R.id.id_telefone_user);
-        String telefone = telefoneTxt.getText().toString();
-
-        EditText loginTxt = findViewById(R.id.id_login_user);
-        String login = loginTxt.getText().toString();
-
-        EditText senhaTxt = findViewById(R.id.id_senha_user);
-        String senha = senhaTxt.getText().toString();
-
-        Map<String, Object> user = new HashMap<>();
-        user.put("nome", nome);
-        user.put("idade", idade);
-        user.put("email", email);
-        user.put("estado", estado);
-        user.put("cidade", cidade);
-        user.put("endereco", endereco);
-        user.put("telefone", telefone);
-        user.put("login", login);
-        user.put("senha", senha);
+        Users user = new Users();
+        user.setNome(retornValor(R.id.id_nome_user));
+        user.setIdade(retornValor(R.id.id_idade_user));
+        user.setEmail(retornValor(R.id.id_email_user));
+        user.setEstado(retornValor(R.id.id_estado_user));
+        user.setCidade(retornValor(R.id.id_cidade_user));
+        user.setEndereco(retornValor(R.id.id_end_user));
+        user.setTelefone(retornValor(R.id.id_telefone_user));
+        user.setLogin(retornValor(R.id.id_login_user));
+        user.setSenha(retornValor(R.id.id_senha_user));
 
         // Run snippets
-        DocSnippets docSnippets = new DocSnippets(mFirestore);
+        DocSnippets docSnippets = new DocSnippets(mFirestore, mDatabase);
 
-        if(docSnippets.runCadastroCliente(user)){
+        if(docSnippets.runCadastroCliente(user, "users")){
             Toast.makeText(getApplicationContext(), "Cadastro Realizado com sucesso", Toast.LENGTH_SHORT).show();
             Intent it = new Intent(CadastroPessoa.this, MenuActivity.class);
             startActivity(it);
