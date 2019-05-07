@@ -168,12 +168,12 @@
                 android:hint="Confirmar Senha"
                 android:inputType="textPassword" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            <ImageView
+                android:id="@+id/id_imagem_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
                 android:onClick="abrirGaleria"
-                app:srcCompat="@drawable/baseline_add_photo_alternate_black_48" />
+                app:srcCompat="@mipmap/add" />
 
             <Button
                 android:id="@+id/cadastrarPessoa"

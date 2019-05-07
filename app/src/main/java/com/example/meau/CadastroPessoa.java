@@ -1,10 +1,15 @@
 package com.example.meau;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -16,8 +21,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,6 +43,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import pub.devrel.easypermissions.EasyPermissions;
+
 public class CadastroPessoa extends AppCompatActivity{
 
     public static final int PICK_IMAGE = 1234;
@@ -43,6 +52,8 @@ public class CadastroPessoa extends AppCompatActivity{
     private FirebaseFirestore mFirestore;
 
     private DatabaseReference mDatabase;
+
+    private String[] galleryPermissions = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
 
     @Override
@@ -56,10 +67,6 @@ public class CadastroPessoa extends AppCompatActivity{
 
         mFirestore = FirebaseFirestore.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        SharedPreferences shared = getSharedPreferences("info",MODE_PRIVATE);
-        String string_temp = shared.getString("id", "");
-
     }
 
     @Override
@@ -75,6 +82,15 @@ public class CadastroPessoa extends AppCompatActivity{
     }
 
     public void abrirGaleria(View view){
+        if (EasyPermissions.hasPermissions(this, galleryPermissions)) {
+            pickImageFromGallery();
+        } else {
+            EasyPermissions.requestPermissions(this, "Access for storage",
+                    101, galleryPermissions);
+        }
+    }
+
+    public void pickImageFromGallery(){
         Intent i = new Intent(Intent.ACTION_PICK,
                 android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(Intent.createChooser(i, "Selecione uma imagem"), PICK_IMAGE);
@@ -82,10 +98,22 @@ public class CadastroPessoa extends AppCompatActivity{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(resultCode != Activity.RESULT_CANCELED){
-            if(requestCode == PICK_IMAGE){
+        if (resultCode != Activity.RESULT_CANCELED) {
+            if (requestCode == PICK_IMAGE) {
                 Uri selectedImage = data.getData();
-                Toast.makeText(getApplicationContext(), selectedImage.toString(), Toast.LENGTH_SHORT).show();
+
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+                Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                cursor.moveToFirst();
+
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                String picturePath = cursor.getString(columnIndex);
+                cursor.close();
+
+                Bitmap bitmap = BitmapFactory.decodeFile(picturePath);
+                ImageView imageView = findViewById(R.id.id_imagem_perfil);
+                imageView.setImageBitmap(bitmap);
             }
         }
     }

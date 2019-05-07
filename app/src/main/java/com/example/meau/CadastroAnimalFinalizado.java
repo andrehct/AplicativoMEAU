@@ -15,28 +15,13 @@ import static android.app.PendingIntent.getActivity;
 
 public class CadastroAnimalFinalizado extends AppCompatActivity {
 
-    private FirebaseFirestore mFirestore;
-
-    private DatabaseReference mDatabase;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_animal_finalizado);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);   //Activity sera exibida em fullscreen
-        mFirestore = FirebaseFirestore.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbarFimCadastroAnimal);
-
-        DocSnippets docSnippets = new DocSnippets(mFirestore, mDatabase);
-
-        EditText nomeTxt = findViewById(R.id.id_usuNomAnimal);
-        Animal animal = new Animal();
-
-        animal.setNomeAnimal(nomeTxt.getText().toString());
-        docSnippets.cadastrarAnimal(animal);
-
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_preto);

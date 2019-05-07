@@ -68,17 +68,18 @@
 
         <Button
             android:id="@+id/id_btnCadAnim"
-            android:shape="rectangle"
-            android:layout_centerHorizontal="true"
-            android:width="2dp"
             android:layout_width="232dp"
             android:layout_height="40dp"
-            android:background="@color/ffd358"
-            android:text="Cadastrar Animal"
-            android:textColor="@android:color/black"
             android:layout_below="@id/id_btnAjudar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="48dp"
             android:layout_marginTop="12dp"
-            android:layout_marginLeft="48dp" />
+            android:width="2dp"
+            android:background="@color/ffd358"
+            android:onClick="cadastroAnimal"
+            android:shape="rectangle"
+            android:text="Cadastrar Animal"
+            android:textColor="@android:color/black" />
 
         <Button
             android:id="@+id/id_btnAjudar"
@@ -96,16 +97,17 @@
 
         <Button
             android:id="@+id/id_btnAdotar"
-            android:shape="rectangle"
-            android:layout_centerHorizontal="true"
-            android:width="2dp"
             android:layout_width="232dp"
             android:layout_height="40dp"
             android:layout_below="@id/id_textoBV"
-            android:layout_marginTop="48dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="48dp"
+            android:layout_marginTop="48dp"
             android:layout_marginRight="32dp"
+            android:width="2dp"
             android:background="@color/ffd358"
+            android:onClick="telaAdotar"
+            android:shape="rectangle"
             android:text="Adotar"
             android:textColor="@android:color/black" />
     </RelativeLayout>

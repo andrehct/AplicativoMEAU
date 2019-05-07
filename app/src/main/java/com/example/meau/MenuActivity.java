@@ -33,26 +33,37 @@ public class MenuActivity extends AppCompatActivity {
 
         toggle.syncState();
 
-        Button btnCadAni = findViewById(R.id.id_btnCadAnim);
+//        Button btnCadAni = findViewById(R.id.id_btnCadAnim);
+//
+//        btnCadAni.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v){
+//                Intent it = new Intent(getApplicationContext(), CadastroAnimal.class);
+//                startActivity(it);
+//            }
+//        });
 
-        btnCadAni.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent it = new Intent(getApplicationContext(), CadastroAnimal.class);
-                startActivity(it);
-            }
-        });
-
-        Button btnAdotAni = findViewById(R.id.id_btnAdotar);
-
-        btnAdotAni.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-
-            }
-        });
+//        Button btnAdotAni = findViewById(R.id.id_btnAdotar);
+//
+//        btnAdotAni.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v){
+//
+//            }
+//        });
     }
 
     public void login(View view){
         Intent it = new Intent(MenuActivity.this, Login.class);
+        startActivity(it);
+    }
+
+
+    public void cadastroAnimal(View view){
+        Intent it = new Intent(MenuActivity.this, CadastroAnimalCorreto.class);
+        startActivity(it);
+    }
+
+    public void telaAdotar(View view){
+        Intent it = new Intent(MenuActivity.this, Adotar.class);
         startActivity(it);
     }
 }

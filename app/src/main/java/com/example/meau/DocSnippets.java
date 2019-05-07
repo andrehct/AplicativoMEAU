@@ -11,13 +11,18 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -90,13 +95,48 @@ public class DocSnippets extends AppCompatActivity implements DocSnippetsInterfa
     }
 
     public void cadastrarAnimal(Animal animal){
-        SharedPreferences shared = getSharedPreferences("info",MODE_PRIVATE);
-        String idDono = shared.getString("id", "");
-        animal.setIdDono(idDono);
+        inserirAnimal(animal);
+    }
+
+    public void recuperarAnimais(){
+        getAnimais();
     }
 
     public void inserirAnimal(Animal animal) {
-        db.collection("pets").document(animal.getIdDono()).set(animal);
+        db.collection("pets").document().set(animal);
+    }
+
+    public void getAnimais() {
+//        DocumentReference docRef = db.collection("cities").document();
+//        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//            @Override
+//            public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                Animal city = documentSnapshot.toObject(Animal.class);
+//            }
+//        });
+
+        // Create a reference to the cities collection
+        db.collection("pets")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                /*Animal animal = new Animal();
+                                animal.setCaminhoFoto(document.getData().get("caminhoFoto").toString());
+                                animal.setIdDono(document.getData().get("idDono").toString());
+                                animal.setNomeAnimal(document.getData().get("nomeAnimal").toString());
+                                animal.setRaca(document.getData().get("raca").toString());
+                                animais.add(animal);*/
+                                //Log.d(TAG, document.getId() + " => " + document.getData().get(""));
+                            }
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+
+                });
     }
 
     public void getAllUsers() {

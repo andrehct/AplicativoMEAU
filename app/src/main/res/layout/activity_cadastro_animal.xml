@@ -108,10 +108,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_textFixNomAnim"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:ems="10"
-                android:inputType="text"
-                android:hint="Nome do animal"/>
+                android:hint="Nome do animal"
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/id_textFixFotosAnim"
